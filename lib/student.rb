@@ -11,7 +11,7 @@ def initialize(name, grade, id=nil)
 end
 
 def self.create_table
-  sql = << sql 
+  sql = << -sql 
     CREATE TABLE IF NOT EXISTS students (
         id INTEGER PRIMARY KEY, 
         name TEXT, 
@@ -22,13 +22,13 @@ def self.create_table
 end
 
 def self.drop_table
-  sql = << sql
+  sql = << -sql
    sql = "DROP TABLE IF EXISTS students"
     DB[:conn].execute(sql)
 end
 
 def save
-  sql = <<-SQL
+  sql = << -SQL
       INSERT INTO students (name, grade)
       VALUES (?, ?)
     SQL
