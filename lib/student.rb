@@ -21,11 +21,7 @@ end
     DB[:conn].execute(sql)
   end
 
-def self.drop_table
-  sql = << -sql
-   sql = "DROP TABLE IF EXISTS students"
-    DB[:conn].execute(sql)
-end
+
 
 def save
   sql = << -SQL
