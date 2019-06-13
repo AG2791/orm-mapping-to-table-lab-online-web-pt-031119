@@ -10,7 +10,7 @@ def initialize(name, grade, id=nil)
 
 end
 
-def .create_table
+def self.create_table
   sql << sql 
   
 
